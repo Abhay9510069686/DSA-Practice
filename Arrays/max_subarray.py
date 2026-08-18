@@ -1,1 +1,9 @@
-print("Hello i dont give my code to you of maximum subarray")
+def maxSubArray(nums):
+    curr = nums[0]
+    maxi = nums[0]
+
+    for i in range(1, len(nums)):
+        curr = max(nums[i], curr + nums[i])
+        maxi = max(maxi, curr)
+
+    return maxi
